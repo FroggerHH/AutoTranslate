@@ -1,0 +1,81 @@
+none: None
+researchPointsMenu: Research points
+recipiesButtonmenu: New Recipes
+toBurnItToAspects: to break it down into its component parts
+tutorToFinishRecipe: When the cauldron has all the items needed for crafting, add the right catalyst to complete the recipe.
+toEmptyCauldron: to empty the boiler
+noAspectsInItem: This item has no aspects.
+incorrectCatalyst: It seems that something could have happened if I had used a different catalyst...
+hideTutorToFinishRecipe: to hide/show the tutorial
+customKEY_rightShift: P. Shift
+toAddCatalist: like a catalyst
+cauldronRecipe_ShieldTransmutation: Shield Transmute
+cauldronRecipe_CoresTransmutation: Nuclear transmutation
+needToUnlockPiece: You still know little about this building and are afraid to deal with it.\n
+recipieNotUnlocked: It's strange, I was sure that something would definitely work out... \u003ccolor\u003dyellow\u003eMaybe I don't know something else?\u003c/color\u003e
+canLearn: You can learn!
+dontHaveEnoughPointsToLearn: Not enough research points
+dontKnowBiomeToLearn: visit the biome
+dontKnowCraftingStationToLearn: Work on
+dontKnowItemToLearn: You haven't held in your hands yet
+dontKnowAspectToLearn: Know
+cantLearn: Unavailable for study
+se_JF_ThaumVision_start: The boundaries of the visible expand for you
+thaumresearch_compleate: Complete research
+thaumCategory_Basics_Name: Basics
+thaumCategory_Alchemy_Name: Alchemy
+thaumCategory_Infusion_Name: Filling
+thaumCategory_Artifice_Name: inventions
+thaumCategory_Auromancy_Name: auromancy
+thaumLearnNode_FirstSteps_Name: First steps
+thaumLearnNode_FirstSteps_Desc: ru
+thaumLearnNode_FirstSteps_Page1_Header_state0: First steps
+thaumLearnNode_FirstSteps_Page2_Header_state0: ru
+thaumLearnNode_FirstSteps_Page1_Header_state1: First steps
+thaumLearnNode_FirstSteps_Page2_Header_state1: ru
+thaumLearnNode_FirstSteps_Page1_Header_state2: First steps
+thaumLearnNode_FirstSteps_Page2_Header_state2: ru
+thaumLearnNode_FirstSteps_Page1_Text_state0: Who would have thought that a small handful of dust could create this wonderful book?
+thaumLearnNode_FirstSteps_Page2_Text_state0: But, dusting a regular workbench with Salis Mundus dust will solve the problem.
+thaumLearnNode_FirstSteps_Page1_Text_state1: Progress!
+thaumLearnNode_FirstSteps_Page2_Text_state1: Vis is what the book calls this energy.\n\n
+thaumLearnNode_FirstSteps_Page1_Text_state2: What marvelous miracles are revealed to me!
+thaumLearnNode_FirstSteps_Page2_Text_state2: It is difficult to say whether matter influences the Essence's belonging to any nature, or whether the very nature of matter depends on the Essence contained in it.
+thaumLearnNode_UnlockAlchemy_Name: Discovery of Alchemy
+thaumLearnNode_UnlockAlchemy_Desc: ru
+thaumLearnNode_UnlockAlchemy_Page1_Header_state0: Discovery of Alchemy
+thaumLearnNode_UnlockAlchemy_Page1_Text_state0: Brewing simple potions certainly has its uses, but true alchemy involves more than simply mixing together a few monster body parts.\n\n
+thaumLearnNode_UnlockInfusion_Name: Opening Fill
+thaumLearnNode_UnlockInfusion_Desc: ru
+thaumLearnNode_UnlockInfusion_Page1_Header_state0: Opening Fill
+thaumLearnNode_UnlockInfusion_Page1_Text_state0: So far, I've been crafting items with vis, taking it for granted.
+thaumLearnNode_UnlockArtifice_Name: Discovery Inventions
+thaumLearnNode_UnlockArtifice_Desc: ru
+thaumLearnNode_UnlockArtifice_Page1_Header_state0: Discovery Inventions
+thaumLearnNode_UnlockArtifice_Page1_Text_state0: I have learned a lot and especially how much I still have to learn.
+thaumLearnNode_UnlockAuromancy_Name: Discovery of Auromancy
+thaumLearnNode_UnlockAuromancy_Desc: ru
+thaumLearnNode_UnlockAuromancy_Page1_Header_state0: Discovery of Auromancy
+thaumLearnNode_UnlockAuromancy_Page1_Text_state0: Creating objects with Vis has opened up a whole new world for me, but still I'm not satisfied.
+researchHeader_Basics_0: Awareness
+researchText_Basics_0: You open up to the currents of Vis around you.
+researchHeader_Auromancy_0: enchantment binding
+researchText_Auromancy_0: You bind several trial enchantments to the small shards left from the crystal.
+researchHeader_Auromancy_1: Awareness
+researchText_Auromancy_1: You open up to the currents of Vis around you.
+researchHeader_Auromancy_2: Spiritual focus
+researchText_Auromancy_2: You focus your mind on the magical and spiritual energy around you, hoping that you can better adjust to its ebb and flow.
+researchHeader_Alchemy_0: Concentrate
+researchText_Alchemy_0: By concentrating a substance in its pure form, it is often possible to learn a lot of new things.
+researchHeader_Alchemy_1: Reactions
+researchText_Alchemy_1: Studying the reactions between two different types of Vis should be useful.
+researchHeader_Alchemy_2: Synthesis
+researchText_Alchemy_2: When essences combine with each other to create more complex forms, a number of interesting and complex reactions take place.
+researchHeader_Infusion_0: measurements
+researchText_Infusion_0: You spend some time carefully measuring different types of essence and their potential vis content.
+researchHeader_Infusion_1: Send Essence to %1$s
+researchText_Infusion_1: You are running a simple experiment to see what happens when you channel the essence of %1$s during the infusion process.
+researchHeader_Infusion_2: Experimental content
+researchText_Infusion_2: Based on assumptions about the consequences of infusing certain objects with essence, as well as the subsequent verification of these results, valuable knowledge can be gained.
+researchHeader__0: ru
+researchText__0: ru

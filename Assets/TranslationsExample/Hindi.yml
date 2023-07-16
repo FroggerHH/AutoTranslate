@@ -1,0 +1,81 @@
+none: कोई नहीं
+researchPointsMenu: अनुसंधान बिंदु
+recipiesButtonmenu: नई रेसिपी
+toBurnItToAspects: इसे इसके घटक भागों में तोड़ना
+tutorToFinishRecipe: जब कड़ाही में क्राफ्टिंग के लिए आवश्यक सभी वस्तुएं हों, तो रेसिपी को पूरा करने के लिए सही उत्प्रेरक जोड़ें।
+toEmptyCauldron: बॉयलर को खाली करने के लिए
+noAspectsInItem: इस आइटम का कोई पहलू नहीं है.
+incorrectCatalyst: ऐसा लगता है कि अगर मैंने किसी भिन्न उत्प्रेरक का उपयोग किया होता तो कुछ हो सकता था...
+hideTutorToFinishRecipe: ट्यूटोरियल को छुपाने/दिखाने के लिए
+customKEY_rightShift: पी. शिफ्ट
+toAddCatalist: एक उत्प्रेरक की तरह
+cauldronRecipe_ShieldTransmutation: शील्ड ट्रांसम्यूट
+cauldronRecipe_CoresTransmutation: परमाणु रूपांतरण
+needToUnlockPiece: आप अभी भी इस इमारत के बारे में बहुत कम जानते हैं और इससे निपटने से डरते हैं।\n
+recipieNotUnlocked: यह अजीब है, मुझे यकीन था कि कुछ न कुछ ज़रूर निकलेगा... \u003ccolor\u003dyellow\u003eशायद मैं कुछ और नहीं जानता?\u003c/color\u003e
+canLearn: आप सीख सकते हो!
+dontHaveEnoughPointsToLearn: पर्याप्त शोध बिंदु नहीं
+dontKnowBiomeToLearn: बायोम पर जाएँ
+dontKnowCraftingStationToLearn: पर काम
+dontKnowItemToLearn: तुमने अभी तक अपने हाथ में नहीं रखा है
+dontKnowAspectToLearn: जानना
+cantLearn: अध्ययन के लिए अनुपलब्ध
+se_JF_ThaumVision_start: दृश्य की सीमाएँ आपके लिए विस्तारित होती हैं
+thaumresearch_compleate: पूरा शोध
+thaumCategory_Basics_Name: मूल बातें
+thaumCategory_Alchemy_Name: रस-विधा
+thaumCategory_Infusion_Name: भरने
+thaumCategory_Artifice_Name: आविष्कार
+thaumCategory_Auromancy_Name: स्फूर्ति
+thaumLearnNode_FirstSteps_Name: पहले कदम
+thaumLearnNode_FirstSteps_Desc: ru
+thaumLearnNode_FirstSteps_Page1_Header_state0: पहले कदम
+thaumLearnNode_FirstSteps_Page2_Header_state0: ru
+thaumLearnNode_FirstSteps_Page1_Header_state1: पहले कदम
+thaumLearnNode_FirstSteps_Page2_Header_state1: ru
+thaumLearnNode_FirstSteps_Page1_Header_state2: पहले कदम
+thaumLearnNode_FirstSteps_Page2_Header_state2: ru
+thaumLearnNode_FirstSteps_Page1_Text_state0: किसने सोचा होगा कि एक छोटी सी मुट्ठी भर धूल से यह अद्भुत पुस्तक बन सकती है?
+thaumLearnNode_FirstSteps_Page2_Text_state0: लेकिन, नियमित कार्यक्षेत्र पर सैलिस मुंडस धूल छिड़कने से समस्या हल हो जाएगी।
+thaumLearnNode_FirstSteps_Page1_Text_state1: प्रगति!
+thaumLearnNode_FirstSteps_Page2_Text_state1: विज़ वह है जिसे पुस्तक इस ऊर्जा कहती है।\n\n
+thaumLearnNode_FirstSteps_Page1_Text_state2: मेरे सामने क्या ही अद्भुत चमत्कार प्रकट हुए हैं!
+thaumLearnNode_FirstSteps_Page2_Text_state2: यह कहना मुश्किल है कि क्या पदार्थ सार की किसी प्रकृति से संबंधित होने को प्रभावित करता है, या क्या पदार्थ की प्रकृति उसमें निहित सार पर निर्भर करती है।
+thaumLearnNode_UnlockAlchemy_Name: कीमिया की खोज
+thaumLearnNode_UnlockAlchemy_Desc: ru
+thaumLearnNode_UnlockAlchemy_Page1_Header_state0: कीमिया की खोज
+thaumLearnNode_UnlockAlchemy_Page1_Text_state0: साधारण औषधि बनाने के निश्चित रूप से अपने उपयोग हैं, लेकिन सच्ची कीमिया में केवल कुछ राक्षस शरीर के अंगों को एक साथ मिलाने से कहीं अधिक शामिल है।\n\n
+thaumLearnNode_UnlockInfusion_Name: ओपनिंग फिल
+thaumLearnNode_UnlockInfusion_Desc: ru
+thaumLearnNode_UnlockInfusion_Page1_Header_state0: ओपनिंग फिल
+thaumLearnNode_UnlockInfusion_Page1_Text_state0: अब तक, मैं इसे हल्के में लेते हुए, विज़ के साथ आइटम तैयार करता रहा हूं।
+thaumLearnNode_UnlockArtifice_Name: खोज आविष्कार
+thaumLearnNode_UnlockArtifice_Desc: ru
+thaumLearnNode_UnlockArtifice_Page1_Header_state0: खोज आविष्कार
+thaumLearnNode_UnlockArtifice_Page1_Text_state0: मैंने बहुत कुछ सीखा है और विशेष रूप से मुझे अभी भी कितना सीखना बाकी है।
+thaumLearnNode_UnlockAuromancy_Name: ऑरोमेंसी की खोज
+thaumLearnNode_UnlockAuromancy_Desc: ru
+thaumLearnNode_UnlockAuromancy_Page1_Header_state0: ऑरोमेंसी की खोज
+thaumLearnNode_UnlockAuromancy_Page1_Text_state0: विज़ के साथ ऑब्जेक्ट बनाने से मेरे लिए एक पूरी नई दुनिया खुल गई है, लेकिन फिर भी मैं संतुष्ट नहीं हूं।
+researchHeader_Basics_0: जागरूकता
+researchText_Basics_0: आप अपने चारों ओर विस की धाराओं के प्रति खुल जाते हैं।
+researchHeader_Auromancy_0: जादू बंधन
+researchText_Auromancy_0: आप क्रिस्टल से बचे छोटे टुकड़ों में कई परीक्षण जादू बांधते हैं।
+researchHeader_Auromancy_1: जागरूकता
+researchText_Auromancy_1: आप अपने चारों ओर विस की धाराओं के प्रति खुल जाते हैं।
+researchHeader_Auromancy_2: आध्यात्मिक ध्यान
+researchText_Auromancy_2: आप अपने मन को अपने आस-पास की जादुई और आध्यात्मिक ऊर्जा पर केंद्रित करते हैं, यह आशा करते हुए कि आप इसके उतार-चढ़ाव के साथ बेहतर तालमेल बिठा सकते हैं।
+researchHeader_Alchemy_0: ध्यान केंद्रित करना
+researchText_Alchemy_0: किसी पदार्थ को उसके शुद्ध रूप में केंद्रित करने से अक्सर बहुत सी नई चीजें सीखना संभव होता है।
+researchHeader_Alchemy_1: प्रतिक्रियाओं
+researchText_Alchemy_1: दो अलग-अलग प्रकार के विज़ के बीच प्रतिक्रियाओं का अध्ययन उपयोगी होना चाहिए।
+researchHeader_Alchemy_2: संश्लेषण
+researchText_Alchemy_2: जब सार एक-दूसरे के साथ मिलकर अधिक जटिल रूप बनाते हैं, तो कई दिलचस्प और जटिल प्रतिक्रियाएं होती हैं।
+researchHeader_Infusion_0: मापन
+researchText_Infusion_0: आप विभिन्न प्रकार के सार और सामग्री की तुलना में उनकी क्षमता को सावधानीपूर्वक मापने में कुछ समय बिताते हैं।
+researchHeader_Infusion_1: सार को %1$s पर भेजें
+researchText_Infusion_1: आप यह देखने के लिए एक सरल प्रयोग चला रहे हैं कि जब आप जलसेक प्रक्रिया के दौरान %1$s के सार को प्रसारित करते हैं तो क्या होता है।
+researchHeader_Infusion_2: प्रायोगिक सामग्री
+researchText_Infusion_2: कुछ वस्तुओं में सार डालने के परिणामों के बारे में धारणाओं के साथ-साथ इन परिणामों के बाद के सत्यापन के आधार पर, मूल्यवान ज्ञान प्राप्त किया जा सकता है।
+researchHeader__0: ru
+researchText__0: ru
