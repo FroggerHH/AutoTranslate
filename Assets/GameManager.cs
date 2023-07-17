@@ -17,10 +17,15 @@ using YamlDotNet.Serialization.NamingConventions;
 
 public class GameManager : MonoBehaviour
 {
-    const string ResultLanguage = "ResultLanguage";
-    const string OriginalLanguage = "OriginalLanguage";
+    const string ResultLanguageYML = "ResultLanguageYML";
+    const string OriginalLanguageYML = "OriginalLanguageYML";
+    const string ResultLanguageCode = "ResultLanguageCode";
+    const string OriginalLanguageCode = "OriginalLanguageCode";
     const string OrigPath = "OrigPath";
     const string ResultPath = "ResultPath";
+    const string SavedMode = "SavedMode";
+    const string NameCode = "NameCode";
+    const string DescriptionCode = "DescriptionCode";
 
 
     private Translator translator = new Translator();
@@ -43,10 +48,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_InputField originalDescription;
     [SerializeField] private TMP_Dropdown originalLanguageDropdown_code_mode;
     [SerializeField] private TMP_Dropdown resultLanguageDropdown_code_mode;
+    [SerializeField] private TMP_Text resultText;
+    [SerializeField] private Button copyButton;
 
 
     [Space(10)] [Header("Other")] [SerializeField]
     private Button YML_modeButton;
+
+    [SerializeField] private GameObject translateButtonsGroup;
+    [SerializeField] private Vector3 translateGroupPos_YML_mode;
+    [SerializeField] private Vector3 translateGroupPos_code_mode;
 
     [SerializeField] private Button code_modeButton;
     [SerializeField] private Button translateButton;
@@ -95,6 +106,14 @@ public class GameManager : MonoBehaviour
     private TMP_Text debugText;
 
 
+    [ContextMenu(nameof(SetTranslateGroupPos_YML))]
+    private void SetTranslateGroupPos_YML() =>
+        translateGroupPos_YML_mode = translateButtonsGroup.transform.localPosition;
+
+    [ContextMenu(nameof(SetTranslateGroupPos_Code))]
+    private void SetTranslateGroupPos_Code() =>
+        translateGroupPos_code_mode = translateButtonsGroup.transform.localPosition;
+
     private string resultPath => resultPathText.text;
     private string origPath => originalPathText.text;
     private string origPathFile => origPath + $"\\{origLanguage_YML}.yml";
@@ -111,24 +130,37 @@ public class GameManager : MonoBehaviour
     private string resultLanguage_Code =>
         resultLanguageDropdown_code_mode.options[resultLanguageDropdown_code_mode.value].text;
 
+    private Mode currentMode => (Mode)(Enum.Parse(typeof(Mode), PlayerPrefs.GetString(SavedMode)));
+
     private void Awake()
     {
         instance = this;
         debugText.text = string.Empty;
+        resultText.text = string.Empty;
+        stopTranslationButton.interactable = false;
+        originalName.onEndEdit.AddListener(_ =>
+            PlayerPrefs.SetString(NameCode, originalName.text));
+        originalDescription.onEndEdit.AddListener(_ =>
+            PlayerPrefs.SetString(DescriptionCode, originalDescription.text));
         originalPathText.onEndEdit.AddListener(_ => CheckFile(origPathFile));
         resultPathText.onEndEdit.AddListener(_ => CheckDirectory(resultPath));
         translateButton.onClick.AddListener(TryTranslate);
         stopTranslationButton.onClick.AddListener((() =>
         {
             StopAllCoroutines();
-            DoDebug("Stoped by user", red, 4);
+            DoDebug("Stoped by user", yellow, 4);
+        }));
+        copyButton.onClick.AddListener((() =>
+        {
+            resultText.text.CopyToClipboard();
+            DoDebug("Translation copied to clipboard", green, 4);
         }));
 
         resultLanguageDropdown_YML_mode.AddOptions(optionDatas);
         resultLanguageDropdown_YML_mode.onValueChanged.AddListener((_ => { CheckDirectory(resultPath); }));
         resultLanguageDropdown_YML_mode.onValueChanged.AddListener((_ =>
         {
-            PlayerPrefs.SetString(ResultLanguage, resultLanguage_YML);
+            PlayerPrefs.SetString(ResultLanguageYML, resultLanguage_YML);
             if (origLanguage_YML == resultLanguage_YML)
                 DoDebug($"Original language equals to result language: {resultLanguage_YML}", yellow, 3);
         }));
@@ -136,21 +168,70 @@ public class GameManager : MonoBehaviour
         originalLanguageDropdown_YML_mode.onValueChanged.AddListener((_ => { CheckFile(origPathFile); }));
         originalLanguageDropdown_YML_mode.onValueChanged.AddListener((_ =>
         {
-            PlayerPrefs.SetString(OriginalLanguage, origLanguage_YML);
+            PlayerPrefs.SetString(OriginalLanguageYML, origLanguage_YML);
             if (origLanguage_YML == resultLanguage_YML)
                 DoDebug($"Original language equals to result language: {resultLanguage_YML}", yellow, 3);
+        }));
+        resultLanguageDropdown_code_mode.AddOptions(optionDatas);
+        resultLanguageDropdown_code_mode.onValueChanged.AddListener((_ =>
+        {
+            PlayerPrefs.SetString(ResultLanguageCode, resultLanguage_Code);
+            if (origLanguage_Code == resultLanguage_Code)
+                DoDebug($"Original language equals to result language: {resultLanguage_Code}", yellow, 3);
+        }));
+        originalLanguageDropdown_code_mode.AddOptions(optionDatas.Where(x => x.text != "-ALL-").ToList());
+        originalLanguageDropdown_code_mode.onValueChanged.AddListener((_ =>
+        {
+            PlayerPrefs.SetString(OriginalLanguageCode, origLanguage_Code);
+            if (origLanguage_Code == resultLanguage_Code)
+                DoDebug($"Original language equals to result language: {resultLanguage_Code}", yellow, 3);
         }));
 
         if (PlayerPrefs.HasKey(OrigPath)) originalPathText.text = PlayerPrefs.GetString(OrigPath);
         if (PlayerPrefs.HasKey(ResultPath)) resultPathText.text = PlayerPrefs.GetString(ResultPath);
-        if (PlayerPrefs.HasKey(ResultLanguage))
+        if (PlayerPrefs.HasKey(OriginalLanguageYML))
+        {
+            originalLanguageDropdown_YML_mode.value = originalLanguageDropdown_YML_mode.options.IndexOf(
+                originalLanguageDropdown_YML_mode.options.Find(
+                    x => x.text == PlayerPrefs.GetString(OriginalLanguageYML)));
+        }
+
+        if (PlayerPrefs.HasKey(ResultLanguageYML))
+        {
             resultLanguageDropdown_YML_mode.value = resultLanguageDropdown_YML_mode.options.IndexOf(
-                resultLanguageDropdown_YML_mode.options.Find(x => x.text == PlayerPrefs.GetString(ResultLanguage)));
+                resultLanguageDropdown_YML_mode.options.Find(x => x.text == PlayerPrefs.GetString(ResultLanguageYML)));
+        }
+
+        if (PlayerPrefs.HasKey(OriginalLanguageCode))
+        {
+            originalLanguageDropdown_code_mode.value = originalLanguageDropdown_code_mode.options.IndexOf(
+                originalLanguageDropdown_code_mode.options.Find(x =>
+                    x.text == PlayerPrefs.GetString(OriginalLanguageCode)));
+        }
+
+        if (PlayerPrefs.HasKey(ResultLanguageCode))
+        {
+            resultLanguageDropdown_code_mode.value = resultLanguageDropdown_code_mode.options.IndexOf(
+                resultLanguageDropdown_code_mode.options.Find(x =>
+                    x.text == PlayerPrefs.GetString(ResultLanguageCode)));
+        }
+
+        if (PlayerPrefs.HasKey(NameCode))
+        {
+            originalName.text = PlayerPrefs.GetString(NameCode);
+        }
+
+        if (PlayerPrefs.HasKey(DescriptionCode))
+        {
+            originalDescription.text = PlayerPrefs.GetString(DescriptionCode);
+        }
 
         YML_modeButton.onClick.AddListener((() =>
         {
             YML_modeButton.interactable = false;
             code_modeButton.interactable = true;
+            PlayerPrefs.SetString(SavedMode, Mode.YML.ToString());
+            translateButtonsGroup.transform.localPosition = translateGroupPos_YML_mode;
 
             YML_modePanel.SetActive(true);
             code_modePanel.SetActive(false);
@@ -159,34 +240,106 @@ public class GameManager : MonoBehaviour
         {
             YML_modeButton.interactable = true;
             code_modeButton.interactable = false;
+            PlayerPrefs.SetString(SavedMode, Mode.Code.ToString());
+            translateButtonsGroup.transform.localPosition = translateGroupPos_code_mode;
 
             YML_modePanel.SetActive(false);
             code_modePanel.SetActive(true);
         }));
 
+        if (PlayerPrefs.HasKey(SavedMode))
+        {
+            switch (currentMode)
+            {
+                case Mode.YML:
+                    YML_modeButton.onClick?.Invoke();
+                    break;
+                case Mode.Code:
+                    code_modeButton.onClick?.Invoke();
+                    break;
+                default:
+                    DoDebug("Unknown saved mode: " + currentMode, ColorType.yellow);
+                    break;
+            }
+        }
+        else YML_modeButton.onClick?.Invoke();
+
 
         CheckFile(origPathFile);
         CheckDirectory(resultPath);
+        translateButtonsGroup.SetActive(true);
+        copyButton.interactable = false;
     }
 
     public void TryTranslate()
     {
-        if (!CheckFile(origPathFile, false)) return;
-        if (!CheckDirectory(resultPath, false)) return;
-        if (origLanguage_YML == resultLanguage_YML)
+        switch (currentMode)
         {
-            DoDebug($"Original language equals to result language: {resultLanguage_YML}", yellow, 3);
-            return;
+            case Mode.YML:
+                if (!CheckFile(origPathFile, false)) return;
+                if (!CheckDirectory(resultPath, false)) return;
+                if (origLanguage_YML == resultLanguage_YML)
+                {
+                    DoDebug($"Original language equals to result language: {resultLanguage_YML}", yellow, 3);
+                    return;
+                }
+
+                translateButton.interactable = false;
+                if (resultLanguage_YML == "-ALL-")
+                {
+                    StartCoroutine(TranslateAll());
+                }
+                else
+                {
+                    StartCoroutine(Translate(resultLanguage_YML));
+                }
+
+                break;
+            case Mode.Code:
+                var str = string.Empty;
+                if (resultLanguage_Code == "-ALL-")
+                {
+                    str += $"YOUR_ITEMNAME.Name";
+                    foreach (var option in originalLanguageDropdown_code_mode.options)
+                    {
+                        str += AddLoc(originalName.text, option.text);
+                    }
+
+                    str += $";";
+
+                    str += $"\n";
+
+                    str += $"YOUR_ITEMNAME.Description";
+                    foreach (var option in originalLanguageDropdown_code_mode.options)
+                    {
+                        str += AddLoc(originalDescription.text, option.text);
+                    }
+
+                    str += $";";
+                }
+                else
+                {
+                    str += $"YOUR_ITEMNAME.Name";
+                    str += AddLoc(originalName.text, resultLanguage_Code);
+                    str += $";";
+                    str += $"\n";
+                    str += $"YOUR_ITEMNAME.Description";
+                    str += AddLoc(originalDescription.text, resultLanguage_Code);
+                    str += $";";
+                }
+
+                resultText.text = str;
+                copyButton.interactable = true;
+                break;
         }
 
-        translateButton.interactable = false;
-        if (resultLanguage_YML == "-ALL-")
+        string AddLoc(string text, string resultLanguage)
         {
-            StartCoroutine(TranslateAll());
-        }
-        else
-        {
-            StartCoroutine(Translate(resultLanguage_YML));
+            string str = string.Empty;
+            var translate = translator.Translate(text, origLanguage_Code, resultLanguage);
+            str += $"\n";
+            str += $"    .{resultLanguage}(\"{translate}\")";
+            return str;
         }
     }
 

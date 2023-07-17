@@ -1,0 +1,81 @@
+none: Aucun
+researchPointsMenu: Points de recherche
+recipiesButtonmenu: Nouvelles recettes
+toBurnItToAspects: le décomposer en ses éléments constitutifs
+tutorToFinishRecipe: Lorsque le chaudron contient tous les éléments nécessaires à la fabrication, ajoutez le bon catalyseur pour compléter la recette.
+toEmptyCauldron: vider la chaudière
+noAspectsInItem: Cet objet n'a aucun aspect.
+incorrectCatalyst: Il semble que quelque chose aurait pu se passer si j'avais utilisé un catalyseur différent...
+hideTutorToFinishRecipe: pour masquer/afficher le didacticiel
+customKEY_rightShift: Décalage P.
+toAddCatalist: comme un catalyseur
+cauldronRecipe_ShieldTransmutation: Transmutation de bouclier
+cauldronRecipe_CoresTransmutation: Transmutation nucléaire
+needToUnlockPiece: Vous savez encore peu de choses sur ce bâtiment et avez peur de vous en occuper.\\n
+recipieNotUnlocked: C'est étrange, j'étais sûr que quelque chose irait définitivement... \\u003ccolor\\u003dyellow\\u003ePeut-être que je ne sais pas autre chose ?\\u003c/color\\u003e
+canLearn: Tu peux apprendre!
+dontHaveEnoughPointsToLearn: Pas assez de points de recherche
+dontKnowBiomeToLearn: visiter le biome
+dontKnowCraftingStationToLearn: Travailler sur
+dontKnowItemToLearn: Tu n'as pas encore tenu dans tes mains
+dontKnowAspectToLearn: Savoir
+cantLearn: Indisponible pour étude
+se_JF_ThaumVision_start: Les limites du visible s'agrandissent pour toi
+thaumresearch_compleate: Recherche complète
+thaumCategory_Basics_Name: Bases
+thaumCategory_Alchemy_Name: Alchimie
+thaumCategory_Infusion_Name: Remplissage
+thaumCategory_Artifice_Name: inventions
+thaumCategory_Auromancy_Name: auromancie
+thaumLearnNode_FirstSteps_Name: Premiers pas
+thaumLearnNode_FirstSteps_Desc: ru
+thaumLearnNode_FirstSteps_Page1_Header_state0: Premiers pas
+thaumLearnNode_FirstSteps_Page2_Header_state0: ru
+thaumLearnNode_FirstSteps_Page1_Header_state1: Premiers pas
+thaumLearnNode_FirstSteps_Page2_Header_state1: ru
+thaumLearnNode_FirstSteps_Page1_Header_state2: Premiers pas
+thaumLearnNode_FirstSteps_Page2_Header_state2: ru
+thaumLearnNode_FirstSteps_Page1_Text_state0: Qui aurait pensé qu'une petite poignée de poussière pourrait créer ce merveilleux livre?
+thaumLearnNode_FirstSteps_Page2_Text_state0: Mais, épousseter un établi ordinaire avec de la poussière Salis Mundus résoudra le problème.
+thaumLearnNode_FirstSteps_Page1_Text_state1: Progrès!
+thaumLearnNode_FirstSteps_Page2_Text_state1: Vis est ce que le livre appelle cette énergie.\\n\\n
+thaumLearnNode_FirstSteps_Page1_Text_state2: Quels merveilleux miracles me sont révélés!
+thaumLearnNode_FirstSteps_Page2_Text_state2: Il est difficile de dire si la matière influence l'appartenance de l'Essence à une nature quelconque, ou si la nature même de la matière dépend de l'Essence qu'elle contient.
+thaumLearnNode_UnlockAlchemy_Name: Découverte de l'Alchimie
+thaumLearnNode_UnlockAlchemy_Desc: ru
+thaumLearnNode_UnlockAlchemy_Page1_Header_state0: Découverte de l'Alchimie
+thaumLearnNode_UnlockAlchemy_Page1_Text_state0: La préparation de potions simples a certainement son utilité, mais la véritable alchimie implique plus que le simple mélange de quelques parties du corps de monstres.\\n\\n
+thaumLearnNode_UnlockInfusion_Name: Remplissage d'ouverture
+thaumLearnNode_UnlockInfusion_Desc: ru
+thaumLearnNode_UnlockInfusion_Page1_Header_state0: Remplissage d'ouverture
+thaumLearnNode_UnlockInfusion_Page1_Text_state0: Jusqu'à présent, j'ai fabriqué des objets avec vis, en le prenant pour acquis.
+thaumLearnNode_UnlockArtifice_Name: Découverte Inventions
+thaumLearnNode_UnlockArtifice_Desc: ru
+thaumLearnNode_UnlockArtifice_Page1_Header_state0: Découverte Inventions
+thaumLearnNode_UnlockArtifice_Page1_Text_state0: J'ai beaucoup appris et surtout combien il me reste à apprendre.
+thaumLearnNode_UnlockAuromancy_Name: Découverte de l'Auromancie
+thaumLearnNode_UnlockAuromancy_Desc: ru
+thaumLearnNode_UnlockAuromancy_Page1_Header_state0: Découverte de l'Auromancie
+thaumLearnNode_UnlockAuromancy_Page1_Text_state0: Créer des objets avec Vis m'a ouvert un tout nouveau monde, mais je ne suis toujours pas satisfait.
+researchHeader_Basics_0: Conscience
+researchText_Basics_0: Vous vous ouvrez aux courants de Vis qui vous entourent.
+researchHeader_Auromancy_0: lien d'enchantement
+researchText_Auromancy_0: Vous liez plusieurs enchantements d'essai aux petits éclats laissés par le cristal.
+researchHeader_Auromancy_1: Conscience
+researchText_Auromancy_1: Vous vous ouvrez aux courants de Vis qui vous entourent.
+researchHeader_Auromancy_2: Orientation spirituelle
+researchText_Auromancy_2: Vous concentrez votre esprit sur l'énergie magique et spirituelle qui vous entoure, en espérant pouvoir mieux vous adapter à ses flux et reflux.
+researchHeader_Alchemy_0: Concentré
+researchText_Alchemy_0: En concentrant une substance dans sa forme pure, il est souvent possible d'apprendre beaucoup de nouvelles choses.
+researchHeader_Alchemy_1: Réactions
+researchText_Alchemy_1: Étudier les réactions entre deux types différents de Vis devrait être utile.
+researchHeader_Alchemy_2: La synthèse
+researchText_Alchemy_2: Lorsque les essences se combinent pour créer des formes plus complexes, un certain nombre de réactions intéressantes et complexes ont lieu.
+researchHeader_Infusion_0: des mesures
+researchText_Infusion_0: Vous passez un certain temps à mesurer soigneusement différents types d'essence et leur potentiel vis-à-vis.
+researchHeader_Infusion_1: Envoyer de l'essence à %1$s
+researchText_Infusion_1: Vous exécutez une expérience simple pour voir ce qui se passe lorsque vous canalisez l'essence de %1$s pendant le processus d'infusion.
+researchHeader_Infusion_2: Contenu expérimental
+researchText_Infusion_2: Sur la base d'hypothèses sur les conséquences de l'infusion de certains objets avec de l'essence, ainsi que sur la vérification ultérieure de ces résultats, des connaissances précieuses peuvent être acquises.
+researchHeader__0: ru
+researchText__0: ru
